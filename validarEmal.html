@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+  var datosCompletp=prompt("Introduce nombre:apellidos:telefono:email:codigoposta");
+  var pos = datosCompletp.split(" ");// separador
+  var nombre = datosCompletp.toUpperCase(); //Convierte una cadena en mayusculas
+  var char1 = pos[0].substr(0, 1);// cojo la posicion para armar el usuario
+  var char2 = pos[2].substr(0, 1);
+   var num = pos[3].substr(0, 1);
+    var email = pos[4].substr(0, 1);
+    var cp = pos[5].substr(0, 1);
+
+  document.write( "tu codigo postal es   "  + pos[5]+"<br>");
+  document.write( "tus apellidos  son " + pos[1]+ pos[2] +"<br>");
+  document.write( "tu email es  " + pos[4]+"<br>");
+
+  function emailIsValid (email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+      }
+  //alert(emailIsValid('tyler@tyler@tylermcginnis.com')); // false
+        alert(emailIsValid (email));
+       /*if(emailIsValid===false){
+        document.write("correcto");
+       }else{
+         alert("Cuidado revisa tu email");
+       document.write("Email no valido");}*/
+
+</script>
+</body>
+</html>
